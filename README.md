@@ -30,6 +30,7 @@ optional add nodemon to project as dev dependancy: `$ npm i -D nodemon`
 
 run the app: `$ DEBUG=back-end-app:* npm start`
 
+Download and install "prometheus" from https://prometheus.io/download/
 
 
 ## Usage
