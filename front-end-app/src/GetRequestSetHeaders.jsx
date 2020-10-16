@@ -5,6 +5,8 @@ class GetRequestSetHeaders extends React.Component {
         super(props);
 
         this.state = {
+            loadingEpoch: 'visible',
+            loadingMetricsData: 'visible',
             lastEpoch: null,
             epochDiff: null,
             metricsData: null
@@ -17,10 +19,16 @@ class GetRequestSetHeaders extends React.Component {
         const updateData = function (scope) {
             fetch('http://localhost:3001/time', { headers })
                 .then(response => response.json())
-                .then(data => scope.setState({ lastEpoch: data.properties.epoch.description }));
+                .then(data => {
+                    scope.setState({ loadingEpoch: 'hidden' });
+                    scope.setState({ lastEpoch: data.properties.epoch.description })
+                });
             fetch('http://localhost:3001/metrics', { headers })
                 .then(response => response.text())
-                .then(html => scope.setState({ metricsData: html }));
+                .then(html => {
+                    scope.setState({ loadingMetricsData: 'hidden' });
+                    scope.setState({ metricsData: html })
+                });
         }
         updateData(this);
         setInterval(() => this.setState({ epochDiff: (Math.round(new Date() / 1000) - this.state.lastEpoch)}), 1000);
@@ -28,7 +36,7 @@ class GetRequestSetHeaders extends React.Component {
     }
 
     render() {
-        const { lastEpoch, epochDiff, metricsData } = this.state;
+        const { loadingEpoch, loadingMetricsData, lastEpoch, epochDiff, metricsData } = this.state;
 
         const stopWatch = function (sec) {
             return new Date(sec * 1000).toISOString().substr(11, 8)
@@ -37,6 +45,9 @@ class GetRequestSetHeaders extends React.Component {
         return (
             <div className="flex-container">
                 <div className="flex-child">
+                    <div class="loader-lastEpoch" style={{visibility: loadingEpoch}}>
+                        Loading Epoch
+                    </div>
                     <div className="lastEpochCls">
                         {lastEpoch}
                     </div>
@@ -45,6 +56,9 @@ class GetRequestSetHeaders extends React.Component {
                     </div>
                 </div>
                 <div className="flex-child">
+                    <div class="loader-metricsDataCls" style={{visibility: loadingMetricsData}}>
+                        Loading Metrics Data
+                    </div>
                     <div className="metricsDataCls">
                         <pre>{metricsData}</pre>
                     </div>
