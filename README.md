@@ -34,6 +34,11 @@ Download and install "prometheus" from https://prometheus.io/download/
 
 create the npx create-react-app front-end-app
 
+Starts the development server: `$ yarn start`
+    
+Bundles the app into static files for production: `$ yarn build`
+    
+Starts the test runner: `$ yarn test`
 
 ## Usage
 
