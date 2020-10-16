@@ -67,7 +67,8 @@ Start front-end react: `$ yarn start`
 ## Credits
 
 Making the world a better place one step at a time :-)
-Special thanks to my parents who did not let me rest and constatly pushed me to do better.
+
+Special thanks to my parents who did not let me rest and constantly pushed me to do better.
 
 ## License
 
