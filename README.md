@@ -24,7 +24,7 @@ add express-prometheus-middleware to project: `$ npm i --save express-prometheus
 
 add prom-client to project: `$ npm i --save prom-client`
 
-add cors to project to support cors when communicating between front-end app and back-end app: `$ npm i --save cors`
+add cors support when communicating between front-end app and back-end app: `$ npm i --save cors`
 
 optional add nodemon to project as dev dependancy: `$ npm i -D nodemon`
 
