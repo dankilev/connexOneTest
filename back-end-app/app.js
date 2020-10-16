@@ -1,14 +1,28 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+// Set up a whitelist and check against it:
+var whitelist = ['http://localhost:3000', 'http://localhost:3001']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
 
 var indexRouter = require('./routes/index');
 var timeRouter = require('./routes/time');
 var metricsRouter = require('./routes/metrics');
 
 var app = express();
+app.use(cors(corsOptions));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
