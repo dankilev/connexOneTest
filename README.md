@@ -4,7 +4,7 @@ Purpose: Demonstrate Full Stack skills with "node.js" (used back-end) and "react
 
 ## Installation
 
-TODO: Describe the installation process
+TODO: Describe the work process
 
 if not already present on the system: `$ sudo npm install -g express-generator`
 
@@ -44,13 +44,26 @@ Starts the test runner: `$ yarn test`
 
 TODO: Write usage instructions
 
-## Contributing
+Pull github project at once: `$ git clone https://github.com/dankilev/connexOneTest.git`
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+Go into cloned project: `$ cd connexOneTest`
+
+enter back-end-app folder: `$ cd back-end-app`
+
+install back-end-app: `$ npm install`
+
+(optional) audit fix the back-end-app: `$ npm audit fix`
+
+Start back-end node: `$ npm start`
+
+start a new terminal sesion or use different console within "screen"
+
+enter front-end-app folder: `$ cd front-end-app`
+
+install front-end-app: `$ npm install`
+
+Start front-end react: `$ yarn start`
+
 
 ## History
 
