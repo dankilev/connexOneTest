@@ -1,6 +1,6 @@
 # connexOneTest
 
-Purpose: Demonstrate Back End skills with node.js
+Purpose: Demonstrate Full Stack skills with "node.js" (used back-end) and "react" (used for front-end)
 
 ## Installation
 
@@ -31,6 +31,8 @@ optional add nodemon to project as dev dependancy: `$ npm i -D nodemon`
 run the app: `$ DEBUG=back-end-app:* npm start`
 
 Download and install "prometheus" from https://prometheus.io/download/
+
+create the npx create-react-app front-end-app
 
 
 ## Usage
