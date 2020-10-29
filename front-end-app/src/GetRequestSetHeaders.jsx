@@ -45,7 +45,7 @@ class GetRequestSetHeaders extends React.Component {
         return (
             <div className="flex-vertical">
                 <div className="flex-child">
-                    <div class="loader-lastEpoch" style={{visibility: loadingEpoch}}>
+                    <div className="loader-lastEpoch" style={{visibility: loadingEpoch}}>
                         Loading Epoch
                     </div>
                     <div className="lastEpochCls">
@@ -56,7 +56,7 @@ class GetRequestSetHeaders extends React.Component {
                     </div>
                 </div>
                 <div className="flex-child">
-                    <div class="loader-metricsDataCls" style={{visibility: loadingMetricsData}}>
+                    <div className="loader-metricsDataCls" style={{visibility: loadingMetricsData}}>
                         Loading Metrics Data
                     </div>
                     <div className="metricsDataCls">
