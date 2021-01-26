@@ -1,6 +1,6 @@
 # connexOneTest
 
-Purpose: Demonstrate Full Stack skills with "node.js" (used back-end) and "react" (used for front-end)
+Purpose: Demonstrate Full Stack skills with "node.js" (used for back-end) and "react" (used for front-end)
 
 ## Installation
 
@@ -34,11 +34,11 @@ Download and install "prometheus" from https://prometheus.io/download/
 
 create the npx create-react-app front-end-app
 
-Starts the development server: `$ yarn start`
+Starts the development server: `$ npm start`
     
-Bundles the app into static files for production: `$ yarn build`
+Bundles the app into static files for production: `$ npm build`
     
-Starts the test runner: `$ yarn test`
+Starts the test runner: `$ npm test`
 
 ## Usage
 
@@ -62,7 +62,7 @@ enter front-end-app folder: `$ cd front-end-app`
 
 install front-end-app: `$ npm install`
 
-Start front-end react: `$ yarn start`
+Start front-end react: `$ npm start`
 
 ## Credits
 
